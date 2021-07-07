@@ -1,0 +1,17 @@
+.container {
+  background-color: var(--background);
+  height: 100vh;
+
+  display: grid;
+  grid-template: 'header' 5rem 'body' / auto;
+}
+
+.header {
+  grid-area: header;
+
+  padding: 1rem;
+}
+
+.body {
+  grid-area: body;
+}

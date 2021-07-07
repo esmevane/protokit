@@ -1,0 +1,27 @@
+.container {
+  height: 100%;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  display: grid;
+  gap: 2rem;
+  grid-template:
+    'header' 2rem
+    'body' minmax(min-content, max-content)
+    'footer' minmax(0, auto) / auto;
+}
+
+.header {
+  grid-area: header;
+
+  padding: 1rem;
+}
+
+.body {
+  grid-area: body;
+  padding: 1rem;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  grid-template-rows: minmax(0, max-content);
+}
